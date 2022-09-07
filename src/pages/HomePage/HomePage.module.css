@@ -15,3 +15,16 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.carousel {
+  background-color: green;
+  width: 50%;
+}
+
+.carousel_item {
+  /* background-color: blue; */
+}
+
+.carousel_item_img {
+  width: 50%;
+}
