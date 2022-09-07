@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 const PhotoCard = (props) => {
   return (
-    <Col xxl={4} lg={6} md={6} xs={12} className={styles.main}>
+    <Col xxl={2} lg={4} md={6} xs={12} className={styles.main}>
       <header>
         <img src={props.photo.url} className={styles.image} />
       </header>

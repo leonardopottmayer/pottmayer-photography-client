@@ -6,6 +6,7 @@ import api from "../../services/api";
 
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import { Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 const HomePage = () => {
   const [photos, setPhotos] = useState([]);
@@ -22,12 +23,14 @@ const HomePage = () => {
 
   return (
     <div className={styles.main}>
+      <Container fluid>
       <Row className={styles.row}>
         {photos.map((ph) => (
           // <li key={ph._id}>{ph.title} </li>
           <PhotoCard photo={ph} key={ph._id} />
         ))}
       </Row>
+      </Container>
     </div>
   );
 };
