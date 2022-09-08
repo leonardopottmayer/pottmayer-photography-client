@@ -4,12 +4,9 @@ import styles from "./PhotosPage.module.css";
 
 import api from "../../services/api";
 
-import PhotoCard from "../../components/PhotoCard/PhotoCard";
-import { Row } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
-import Navbar from "../../components/Navbar/Navbar";
-import HomeBanner from "../../components/Normal/HomeBanner/HomeBanner";
-
+import PhotoCard from "../../components/Normal/PhotoCard/PhotoCard";
+import Row from "react-bootstrap/Row";
+import Navbar from "../../components/Normal/Navbar/Navbar";
 
 const HomePage = () => {
   const [photos, setPhotos] = useState([]);
@@ -27,6 +24,11 @@ const HomePage = () => {
   return (
     <div className={styles.main}>
       <Navbar />
+      <Row className={styles.row}>
+        {photos.map((ph) => (
+          <PhotoCard photo={ph} key={ph._id} />
+        ))}
+      </Row>
     </div>
   );
 };
