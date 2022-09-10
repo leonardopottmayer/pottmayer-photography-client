@@ -15,13 +15,13 @@ const PhotoCard = (props) => {
         <div className={styles.body}>
           {/* <h2 className={styles.title}>{props.photo.title}</h2> */}
 
-          <p className={`${styles.item} ${styles.inline_item}`}>
+          <p className={styles.item}>
             📍 {props.photo.local}
           </p>
-          <p className={`${styles.item} ${styles.inline_item}`}>
+          <p className={styles.date}>
             {moment(props.photo.date).format("DD/MM/YYYY").toString()}
           </p>
-          <p className={styles.item}>{props.photo.description}</p>
+          <p className={styles.description}>{props.photo.description}</p>
         </div>
       </div>
     </Col>
