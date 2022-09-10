@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "../../components/AdminNavbar/Navbar";
+import Navbar from "../../components/Admin/Navbar/Navbar";
 // import AdminPhrases from "../../components/AdminPhrases/AdminPhrases";
 
 const AdminPage = () => {

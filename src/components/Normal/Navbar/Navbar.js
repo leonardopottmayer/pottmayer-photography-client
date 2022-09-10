@@ -10,7 +10,12 @@ import Nav from "react-bootstrap/Nav";
 
 function NavBar() {
   return (
-    <Navbar className={styles.navbar_main} variant="dark" expand="lg">
+    <Navbar
+      className={`${styles.navbar_main} justify-content-between`}
+      variant="dark"
+      expand="lg"
+      sticky="top"
+    >
       <Navbar.Brand href="/">
         <img
           alt="Logo"
@@ -27,8 +32,8 @@ function NavBar() {
           <Link className={styles.nav_link} to="/">
             Home
           </Link>
-          <Link className={styles.nav_link} to="/photos">
-            Photos
+          <Link className={styles.nav_link} to="/about">
+            About
           </Link>
           <a
             className={styles.nav_link}

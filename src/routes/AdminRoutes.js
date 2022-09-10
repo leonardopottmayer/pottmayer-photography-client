@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import AdminPage from "../pages/Admin/AdminPage";
-import AdminPhotos from "../components/AdminPhotos/AdminPhotos";
+import AdminPhotos from "../components/Admin/AdminPhotos/AdminPhotos";
 
 function OtherRoutes() {
   return (

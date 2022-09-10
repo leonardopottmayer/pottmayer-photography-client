@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "./AdminPhotos.module.css";
+import api from "../../../services/api";
 
-import api from "../../services/api";
-
-import Navbar from "../../components/AdminNavbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 
 const AdminPhotos = () => {
   const [photos, setPhotos] = useState([]);

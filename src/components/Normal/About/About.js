@@ -34,7 +34,6 @@ const About = () => {
       </Col>
       <Col xxl={6} lg={6} md={6} xs={12} className={styles.col}>
         <div className={styles.about_description_container}>
-          
           <h1 className={`animate__animated animate__fadeIn ${styles.title}`}>
             Sobre mim
           </h1>

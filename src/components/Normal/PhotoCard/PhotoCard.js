@@ -13,10 +13,13 @@ const PhotoCard = (props) => {
           <img src={props.photo.url} className={styles.image} />
         </header>
         <div className={styles.body}>
-          <h2 className={styles.title}>{props.photo.title}</h2>
+          {/* <h2 className={styles.title}>{props.photo.title}</h2> */}
+
           <p className={`${styles.item} ${styles.inline_item}`}>
-            {moment(props.photo.date).format("DD/MM/YYYY").toString()} -{" "}
-            {props.photo.local}
+            📍 {props.photo.local}
+          </p>
+          <p className={`${styles.item} ${styles.inline_item}`}>
+            {moment(props.photo.date).format("DD/MM/YYYY").toString()}
           </p>
           <p className={styles.item}>{props.photo.description}</p>
         </div>

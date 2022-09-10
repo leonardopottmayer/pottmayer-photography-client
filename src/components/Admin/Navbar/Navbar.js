@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logoLightBlue from "../../assets/logos/logo192.png";
+import logoLightBlue from "../../../assets/logos/logo192.png";
 
 import styles from "./Navbar.module.css";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Button } from "react-bootstrap";
-import { useAuth } from "../../contexts/auth";
+import { useAuth } from "../../../contexts/auth";
 
 function NavBar() {
   const { logout, signed } = useAuth();
