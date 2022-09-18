@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./HomeBanner.module.css";
 
-import moonBanner from "../../../assets/banners/moonBanner.png";
+import moonBanner from "../../../assets/banners/moonBanner2.png";
 
 const HomeBanner = () => {
   return (

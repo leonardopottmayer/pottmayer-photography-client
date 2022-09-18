@@ -5,16 +5,16 @@ import api from "../../services/api";
 
 import Row from "react-bootstrap/Row";
 
-import PhotoCard from "../../components/Normal/PhotoCard/PhotoCard";
+import PostCard from "../../components/Normal/PostCard/PostCard";
 import Navbar from "../../components/Normal/Navbar/Navbar";
 import HomeBanner from "../../components/Normal/HomeBanner/HomeBanner";
 
 const HomePage = () => {
-  const [photos, setPhotos] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   const fetchData = async () => {
-    await api.get("/posts/photo").then(({ data }) => {
-      setPhotos(data.result);
+    await api.get("/posts/all").then(({ data }) => {
+      setPosts(data.result);
     });
   };
 
@@ -27,8 +27,8 @@ const HomePage = () => {
       <Navbar />
       <HomeBanner />
       <Row className={styles.row}>
-        {photos.map((ph) => (
-          <PhotoCard photo={ph} key={ph._id} />
+        {posts.map((post) => (
+          <PostCard post={post} key={post._id} />
         ))}
       </Row>
     </div>
