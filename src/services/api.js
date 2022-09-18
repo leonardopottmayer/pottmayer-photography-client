@@ -1,8 +1,9 @@
 import axios from "axios";
+require("dotenv").config();
 
 const api = axios.create({
   // baseURL: "http://localhost:7575",
-  baseURL: "http://localhost:7575",
+  baseURL: "https://pottmayer-photography-api.herokuapp.com",
 });
 
 api.interceptors.request.use(
