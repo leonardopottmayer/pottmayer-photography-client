@@ -1,0 +1,33 @@
+.main {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  position: absolute;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000000;
+  padding: 2rem;
+}
+
+.button_add_post {
+  background-color: rgb(4, 184, 109);
+  padding: 5px;
+  border: none;
+  color: #ffffff;
+}
+
+.button_add_container {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .row {
+    padding: 0.75rem;
+  }
+}

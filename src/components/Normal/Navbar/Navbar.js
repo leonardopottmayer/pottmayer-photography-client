@@ -29,12 +29,12 @@ function NavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Link className={styles.nav_link} to="/">
+          {/* <Link className={styles.nav_link} to="/">
             Home
-          </Link>
-          <Link className={styles.nav_link} to="/about">
+          </Link> */}
+          {/* <Link className={styles.nav_link} to="/about">
             About
-          </Link>
+          </Link> */}
           <a
             className={styles.nav_link}
             target="_blank"

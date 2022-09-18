@@ -1,0 +1,198 @@
+.modal_background {
+  width: 100vw;
+  height: 100vh;
+  /* From https://css.glass */
+  background: rgba(32, 33, 36, 0.73);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(32, 33, 36, 0.32);
+  position: fixed;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: #202124;
+  width: 80%;
+  position: fixed;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 15px;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal_title {
+  display: inline-block;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.money_svg {
+  color: white;
+  width: 3rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+.modal_form {
+  text-align: center;
+}
+
+.modal_label {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.modal_label_type {
+  color: #fff;
+  margin: 0 1rem;
+}
+
+.type_option {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+  margin: 1rem auto;
+}
+
+.modal_input {
+  display: block;
+  width: 25vw;
+  margin: 0 auto;
+  border-radius: 7px;
+  height: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.type_input {
+}
+
+.inOrOut_input {
+  width: 1.5rem;
+}
+
+.modal_textarea {
+  display: block;
+  width: 25vw;
+  margin: 0 auto;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.form_button {
+  margin: 0.5rem auto;
+  display: block;
+  width: 50%;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.table_imageTd {
+  width: 150px;
+}
+
+.table_container {
+  overflow: auto;
+}
+
+.table_td {
+  padding: 1rem;
+}
+
+.send_file_input{
+  display: none;
+}
+
+.send_file_label {
+  padding: 0.5rem;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+
+.add_photo_button{
+  padding: 0.5rem;
+  width: 200px;
+  background-color: rgb(4, 184, 109);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  border: none;
+  margin: 10px auto 0 auto;
+}
+
+.selected_file_name {
+  color: #FFFFFF;
+}
+
+/* Center input placeholders */
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .modal_input {
+    width: 60%;
+  }
+
+  .modal_textarea {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .modal_input {
+    width: 70%;
+  }
+
+  .modal_textarea {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal_input {
+    width: 80%;
+  }
+
+  .modal_textarea {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal_input {
+    width: 90%;
+  }
+
+  .modal_textarea {
+    width: 90%;
+  }
+}

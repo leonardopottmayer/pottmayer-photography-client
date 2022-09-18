@@ -31,11 +31,11 @@ function NavBar() {
           <Link className={styles.nav_link} to="/">
             Home
           </Link>
-          <Link className={styles.nav_link} to="/admin/photos">
-            Photos
+          <Link className={styles.nav_link} to="/admin">
+            Admin
           </Link>
-          <Link className={styles.nav_link} to="/admin/users">
-            Users
+          <Link className={styles.nav_link} to="/admin/posts">
+            Posts
           </Link>
           {signed && (
             <Button
