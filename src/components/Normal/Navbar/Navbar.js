@@ -38,7 +38,7 @@ function NavBar() {
           <a
             className={styles.nav_link}
             target="_blank"
-            href="https://www.pottmayer.dev"
+            href="https://pottmayer.dev"
           >
             Dev
           </a>
