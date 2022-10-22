@@ -23,7 +23,7 @@ const HomePage = () => {
 
     const ppProjectsAccessVariable = localStorage.getItem("@pp:projectsAccessVariable");
 
-    if (ppProjectsAccessVariable === "0" || !ppProjectsAccessVariable) {
+    if (ppProjectsAccessVariable === "0" || ppProjectsAccessVariable == null) {
       const projectAccessPostResponse = await pottmayerDevApi.post("/projectsAccess", {
         projectName: "Pottmayer Photography"
       });
@@ -35,6 +35,10 @@ const HomePage = () => {
   };
 
   useEffect(() => {
+    if(localStorage.getItem("@pp:projectsAccessVariable") === "1"){
+      localStorage.setItem("@pp:projectsAccessVariable", "0");
+    }
+
     if(performance.navigation.type === 1) {
       localStorage.setItem("@pp:projectsAccessVariable", "0");
     }
