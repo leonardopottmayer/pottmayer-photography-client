@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./HomePage.module.css";
 import api from "../../services/api";
+import pottmayerDevApi from "../../services/pottmayerDevApi";
 
 import Row from "react-bootstrap/Row";
 
@@ -19,10 +20,25 @@ const HomePage = () => {
     await api.get("/posts/all").then(({ data }) => {
       setPosts(data.result);
     });
+
+    const mtvProjectsAccessVariable = localStorage.getItem("@pp:projectsAccessVariable");
+
+    if (mtvProjectsAccessVariable === "0"){
+      const projectAccessPostResponse = await pottmayerDevApi.post("/projectsAccess", {
+        projectName: "Pottmayer Photography"
+      });
+
+      localStorage.setItem("@pp:projectsAccessVariable", "1");
+    }
+
     setShowLoading(false);
   };
 
   useEffect(() => {
+    if(performance.navigation.type === 1) {
+      localStorage.setItem("@pp:projectsAccessVariable", "0");
+    }
+
     fetchData();
   }, []);
 
