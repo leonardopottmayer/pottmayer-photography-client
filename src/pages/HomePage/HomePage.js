@@ -21,9 +21,9 @@ const HomePage = () => {
       setPosts(data.result);
     });
 
-    const mtvProjectsAccessVariable = localStorage.getItem("@pp:projectsAccessVariable");
+    const ppProjectsAccessVariable = localStorage.getItem("@pp:projectsAccessVariable");
 
-    if (mtvProjectsAccessVariable === "0"){
+    if (ppProjectsAccessVariable === "0" || !ppProjectsAccessVariable) {
       const projectAccessPostResponse = await pottmayerDevApi.post("/projectsAccess", {
         projectName: "Pottmayer Photography"
       });
