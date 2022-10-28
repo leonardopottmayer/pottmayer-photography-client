@@ -15,35 +15,33 @@ const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [showLoading, setShowLoading] = useState(false);
 
-  const fetchData = async () => {
-    setShowLoading(true);
-    await api.get("/posts/all").then(({ data }) => {
-      setPosts(data.result);
-    });
+  useEffect(() => {
+    let ignore = false;
 
-    const ppProjectsAccessVariable = localStorage.getItem("@pp:projectsAccessVariable");
+    const fetchApi = async () => {
+      setShowLoading(true);
 
-    if (ppProjectsAccessVariable === "0" || ppProjectsAccessVariable == null) {
-      const projectAccessPostResponse = await pottmayerDevApi.post("/projectsAccess", {
-        projectName: "Pottmayer Photography"
+      await api.get("/posts/all").then(({ data }) => {
+        setPosts(data.result);
       });
 
-      localStorage.setItem("@pp:projectsAccessVariable", "1");
-    }
+      if (!ignore) {
+        const projectAccessPostResponse = await pottmayerDevApi.post(
+          "/projectsAccess",
+          {
+            projectName: "Pottmayer Photography",
+          }
+        );
+      }
 
-    setShowLoading(false);
-  };
+      setShowLoading(true);
+    };
 
-  useEffect(() => {
-    if(localStorage.getItem("@pp:projectsAccessVariable") === "1"){
-      localStorage.setItem("@pp:projectsAccessVariable", "0");
-    }
+    fetchApi();
 
-    if(performance.navigation.type === 1) {
-      localStorage.setItem("@pp:projectsAccessVariable", "0");
-    }
-
-    fetchData();
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   return (
