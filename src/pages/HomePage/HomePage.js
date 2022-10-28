@@ -21,9 +21,7 @@ const HomePage = () => {
     const fetchApi = async () => {
       setShowLoading(true);
 
-      await api.get("/posts/all").then(({ data }) => {
-        setPosts(data.result);
-      });
+      const response = await api.get("/posts/all");
 
       if (!ignore) {
         const projectAccessPostResponse = await pottmayerDevApi.post(
@@ -34,7 +32,11 @@ const HomePage = () => {
         );
       }
 
-      setShowLoading(true);
+      setShowLoading(false);
+
+      if (response.data.result) {
+        setPosts(response.data.result);
+      }
     };
 
     fetchApi();
