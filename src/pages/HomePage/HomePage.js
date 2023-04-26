@@ -23,14 +23,14 @@ const HomePage = () => {
 
       const response = await api.get("/posts/all");
 
-      if (!ignore) {
-        const projectAccessPostResponse = await pottmayerDevApi.post(
-          "/projectsAccess/d",
-          {
-            projectName: "Pottmayer Photography",
-          }
-        );
-      }
+      // if (!ignore) {
+      //   const projectAccessPostResponse = await pottmayerDevApi.post(
+      //     "/projectsAccess/d",
+      //     {
+      //       projectName: "Pottmayer Photography",
+      //     }
+      //   );
+      // }
 
       setShowLoading(false);
 
