@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   // baseURL: "http://localhost:7575",
-  baseURL: "api.photography.pottmayer.dev",
+  baseURL: "https://api.photography.pottmayer.dev",
 });
 
 api.interceptors.request.use(
